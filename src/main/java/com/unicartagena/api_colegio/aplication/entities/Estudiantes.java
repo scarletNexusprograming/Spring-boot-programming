@@ -1,4 +1,4 @@
-package com.unicartagena.api_colegio.model;
+package com.unicartagena.api_colegio.aplication.entities;
 
 import jakarta .persistence.*;
 import lombok.*;
@@ -8,7 +8,7 @@ import lombok.*;
 @Table (name = "estudiantes")
 @NoArgsConstructor
 
-public class EstudianteModel {
+public class Estudiante {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
