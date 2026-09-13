@@ -1,0 +1,32 @@
+api:
+  version: 1.0.0
+  title: Colegio API
+  basePackage: com.unicartagena.api_colegio
+  description: Api para gestión de estudiantes del colegio
+  terms: https://
+
+#Server configurations
+server:
+  servlet:
+    context-path: /api-colegio
+  port: ${PORT:8080}
+  error:
+    include-message: always
+    include-binding-errors: always
+
+#Spring configs
+spring:
+  application:
+    name: api-colegio
+  datasource:
+    url: jdbc:mysql://localhost:3306/colegio_db
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
