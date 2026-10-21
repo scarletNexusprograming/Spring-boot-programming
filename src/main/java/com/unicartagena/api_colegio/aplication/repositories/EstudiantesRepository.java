@@ -10,6 +10,7 @@ import java.util.Optional;
 public interface EstudiantesRepository extends JpaRepository<Estudiantes, Long> {
 
     //no se agrega el id porque biene por defecto
+    //estas son petciones personalizadas para la base de datos
     Optional<Estudiantes> findByNombre(String nombre);
     Optional<Estudiantes> findByCorreo(String correo);
     Optional<Estudiantes> findByIdentificacion(Long identificacion);
