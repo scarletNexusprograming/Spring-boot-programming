@@ -14,23 +14,24 @@ import lombok.Setter;
 @Setter
 public class CrearEstudianteRequest {
 
-    @NotBlank
-    @Size(max = 20)// esto es para poner un limite de caracteres
+    @NotBlank (message = "El nombre el obligatorio ")
+    @Size(max = 20, message = "El nombre no deve superar los 20 caracteres")// esto es para poner un limite de caracteres
     private String nombre;
 
-    @NotBlank
-    @Size(max = 20)
+    @NotBlank(message = "el apellido es obligatorio")
+    @Size(max = 20, message = "el apellido  no puede superar los 20 caracteres ")
     private String apellido;
 
-    @NotNull
+    @NotNull(message = "no pude ser un dati nulo ")
+    @Size(max = 10, message = "la identificacion solo contiene 10 caracteres ")
     private Long identificacion;
 
-    @NotBlank
+    @NotBlank(message = "email es obligatorio")
     @Email
-    @Size(max = 70)
+    @Size(max = 70, message = "maximo 70 caracteres")
     private String correo;
 
-    @NotNull
+    @NotNull(message = "dato no nulo")
     @Min(1)//evita edades de o o negativas
     private Integer edad;
 }
