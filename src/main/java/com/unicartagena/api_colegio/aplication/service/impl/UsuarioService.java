@@ -1,4 +1,3 @@
-
 package com.unicartagena.api_colegio.aplication.service.impl;
 
 import com.unicartagena.api_colegio.aplication.dto.UsuariosDTO;
@@ -10,7 +9,6 @@ import com.unicartagena.api_colegio.aplication.service.IUsuarioService;
 import lombok.RequiredArgsConstructor;
 
 import org.modelmapper.ModelMapper;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -22,7 +20,6 @@ public class UsuarioService implements IUsuarioService {
 
     private final UsuariosRepository usuariosRepository;
     private final ModelMapper modelMapper;
-    private final PasswordEncoder passwordEncoder;
 
     @Override
     public UsuariosDTO crear(CrearUsuarioRequest request) {
@@ -36,7 +33,7 @@ public class UsuarioService implements IUsuarioService {
         usuario.setNombre(request.getNombre());
         usuario.setApellido(request.getApellido());
         usuario.setCorreo(request.getCorreo());
-        usuario.setContrasena(passwordEncoder.encode(request.getContrasena()));
+        usuario.setContrasena(request.getContrasena());
         usuario.setEstado(true);
 
         Usuarios usuarioGuardado = usuariosRepository.save(usuario);
@@ -109,7 +106,7 @@ public class UsuarioService implements IUsuarioService {
         usuario.setNombre(request.getNombre());
         usuario.setApellido(request.getApellido());
         usuario.setCorreo(request.getCorreo());
-        usuario.setContrasena(passwordEncoder.encode(request.getContrasena()));
+        usuario.setContrasena(request.getContrasena());
 
         Usuarios usuarioActualizado = usuariosRepository.save(usuario);
 

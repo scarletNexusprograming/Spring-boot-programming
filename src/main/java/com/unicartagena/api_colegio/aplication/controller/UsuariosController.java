@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+//Rescontroller indica que esta clase se encargara de atender las peticiones web
 @RestController
 @RequestMapping("/api/v1/usuarios")
 @CrossOrigin(origins = "*", maxAge = 3600)
