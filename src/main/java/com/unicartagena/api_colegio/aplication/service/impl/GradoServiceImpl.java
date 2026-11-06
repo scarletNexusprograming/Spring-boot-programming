@@ -1,4 +1,6 @@
-package com.unicartagena.api_colegio.aplication.service;
+package com.unicartagena.api_colegio.aplication.service.impl;
+
+import com.unicartagena.api_colegio.aplication.service.IGradoService;
 
 import com.unicartagena.api_colegio.aplication.dto.GradosDTO;
 import com.unicartagena.api_colegio.aplication.entities.Grados;

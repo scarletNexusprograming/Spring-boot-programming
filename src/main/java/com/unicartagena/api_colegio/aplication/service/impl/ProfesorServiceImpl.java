@@ -1,4 +1,4 @@
-package com.unicartagena.api_colegio.aplication.service;
+package com.unicartagena.api_colegio.aplication.service.impl;
 
 import com.unicartagena.api_colegio.aplication.dto.ProfesoresDTO;
 import com.unicartagena.api_colegio.aplication.entities.Profesores;
@@ -8,6 +8,7 @@ import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import com.unicartagena.api_colegio.aplication.service.IProfesorService;
 
 import java.util.List;
 

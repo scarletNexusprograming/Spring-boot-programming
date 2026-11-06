@@ -1,4 +1,6 @@
-package com.unicartagena.api_colegio.aplication.service;
+package com.unicartagena.api_colegio.aplication.service.impl;
+
+import com.unicartagena.api_colegio.aplication.service.IMatriculaService;
 
 import java.util.List;
 
