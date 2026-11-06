@@ -3,17 +3,20 @@ package com.unicartagena.api_colegio.aplication.entities;
 import jakarta.persistence.*;
 import lombok.*;
 
-@Entity
-@Table
 @Data
+@Entity
+@Table(name = "grados")
 @NoArgsConstructor
-@AllArgsConstructor
-
 public class Grados {
 
-    @id
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    @Column(name = "grado_id")
+    private Long id;
+
+    @Column(name = "nombre", length = 30, nullable = false, unique = true)
     private String nombre;
-    private String descripcion;
+
+    @Column(name = "nivel", length = 20, nullable = false)
+    private String nivel;
 }
