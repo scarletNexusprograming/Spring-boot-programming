@@ -1,4 +1,3 @@
-
 package com.unicartagena.api_colegio.aplication.dto;
 
 import lombok.Data;

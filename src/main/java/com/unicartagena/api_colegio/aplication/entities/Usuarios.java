@@ -2,7 +2,7 @@ package com.unicartagena.api_colegio.aplication.entities;
 
 import jakarta.persistence.*;
 import lombok.*;
-import java.time.LocalDateTime  ;
+import java.time.LocalDateTime;
 
 @Data
 @Entity
@@ -33,12 +33,10 @@ public class Usuarios {
     @Column(name = "fecha_creacion", nullable = false, updatable = false)
     private LocalDateTime fechaCreacion;
 
-    @PrePersist // Esta anotacion de JPA indica  que el metodo se ejecutara antes de insertar la entidad en la base de datoos
+    @PrePersist
     public void asignarFechaCreacion() {
         if (fechaCreacion == null) {
             fechaCreacion = LocalDateTime.now();
-
-            }
-          }
         }
-
+    }
+}

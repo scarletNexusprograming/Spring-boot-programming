@@ -1,4 +1,3 @@
-
 package com.unicartagena.api_colegio.aplication.repositories;
 
 import com.unicartagena.api_colegio.aplication.entities.Usuarios;
